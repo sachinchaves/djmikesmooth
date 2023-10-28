@@ -1,0 +1,1277 @@
+:root {
+
+    --primary: #ff0a74;
+    --secondary: #17071e;
+    --tertiary: #408bd1;
+    --background: #f7f7f7;
+    --content: #c8c8c8;
+
+    --headlineOne: 'Open Sans', sans-serif;
+    /*--headlineTwo: 'Dawning of a New Day', cursive;*/
+    --body: 'Open Sans', sans-serif;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+    
+}
+
+body{
+    font-family: var(--body);
+}
+
+h2 {
+    font-family: var(--headlineOne);
+    text-transform: uppercase;
+    color: var(--secondary);
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+p{
+    font-family: var(--body);
+    
+    padding-top:7px;
+}
+
+
+a {
+    text-decoration: none;
+
+}
+
+i {
+    color: #FFFFFF;
+}
+
+.sectionSubheading, .wineMaking a, .cutomerWork {
+    color: var(--primary);
+}
+
+#main {
+    padding: 0 20px;
+}
+
+
+.sectionHeading {
+    font-size: 30px;
+}
+
+.sectionSubheading {
+    padding-top: 7px;
+    font-size: 16px;
+}
+
+
+
+.content p {
+    color: var(--content);
+    padding: 11px 0;
+}
+
+.cta-primary {
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: var(--primary);
+    font-family: var(--headlineOne);
+    padding: 10px 25px;
+    display: inline-block;
+    transition: .3s linear .1s;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.cta-primary.disabled, .cta-primary.disabled:hover{
+    background:#efefef;
+}
+
+.cta-primary:hover {
+    background: #ff0a74c4;
+}
+
+.cta-secondary {
+    text-transform: uppercase;
+    color: var(--primary);
+    background: #FFFFFF;
+    font-family: var(--headlineOne);
+    padding: 10px 25px;
+    display: inline-block;
+    transition: .3s linear .1s;
+    text-decoration: underline;
+}
+
+.cta-secondary:hover {
+    color: #5a8274;
+}
+
+.ctaWrapper {
+    padding-top: 22px;
+}
+.spacer {
+    margin-bottom: 35px;
+}
+
+.siteContainer {
+    width:1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.hero {
+    
+    height: 600px;
+    background: url(../imgs/banner.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+h2.sectionHeading {
+    margin-bottom: 30px;
+}
+
+h2.sectionHeading:after {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--secondary);
+    content: "";
+    margin-top: 10px;
+}
+
+#tour .hero .heroBanner, #discography .hero .heroBanner{
+    justify-content: center;
+    height: 300px;
+}
+
+#contact .heroBanner, #media .heroBanner{
+    justify-content: center;
+    height: 200px;
+}
+
+#tour .heroInner, #discography .heroInner, #contact .heroInner, #media .heroInner{
+    background:transparent;
+}
+
+#media .heroInner h2{
+    color: var(--secondary);
+}
+
+#tour .hero {
+    background-image: url(../imgs/tour_banner.jpg);
+    background-position: center;
+}
+
+#discography .hero {
+    background-image: url(../imgs/David-Guetta-and-Morten-Photo-by-Rukes.jpg);
+    background-position: center;
+}
+
+#tour .hero, #discography .hero, #contact .hero{
+    height: 400px;
+}
+
+#media .hero {
+    height: 200px;
+}
+#contact .hero {
+    background-image: url(../imgs/contact.jpg);
+    background-position: center;
+}
+
+#media .hero {
+    background:var(--background);
+}
+
+#home .aboutWrapper img{
+    width: 100%;
+}
+
+.logo {
+    background: url('../imgs/logoSprite.png');
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    text-indent: -99999px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+
+.logoIcon {
+    background-position: 0;
+    background-size: cover;
+}
+
+.logoIcon:hover{
+    background-position: -92px;
+}
+
+.navigationWrapper {
+    background: var(--background);
+    position: relative;
+    height: 110px;
+}
+
+.navigationWrapperInner {
+    position: relative;
+}
+
+/*NAV FLYOUT*/
+
+#navFlyout i{
+    color: #FFF;
+}
+#navFlyout .navigation {
+    background: black;
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transition: left .5s linear;
+    z-index: 97;
+}
+
+#navFlyout .navigation a {
+    text-decoration: none; 
+    color:#FFFFFF;
+    font-size: 40px; 
+    display: block; 
+    margin-bottom: 20px;
+}
+
+#navFlyout .navigation .items {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#navFlyout input {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 46px;
+    height: 56px;
+    opacity: 0;
+    z-index: 99;
+}
+#navFlyout input:checked + .navigation {
+    display: block;
+    left: 0%;
+}
+#navFlyout i.fas {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 50px;
+    z-index: 98;
+}
+
+#navFlyout ul.subNav {
+    padding-left: 30px;
+}
+
+#navFlyout ul li {
+    list-style: none;
+}
+
+/*NAv FLYOUT*/
+
+/*NAV CSS*/
+#navBar {
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+
+
+#navBar ul {
+    padding: 0px;
+    list-style: none;
+}
+
+#navBar li {
+    float: left;
+    position: relative;
+}
+
+
+#navBar ul li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--secondary);
+    font-family: var(--body);
+    text-transform: uppercase;
+}
+
+.bookLink {
+    /* border: 2px solid var(--primary); */
+}
+
+.bookLink a{
+    color: var(--primary);
+}
+
+.bookLink:hover {
+    background: var(--primary);
+}
+
+.hero h2 {
+    font-size: 35px;
+    align-self: center;
+    color: #FFFFFF;
+    
+}
+
+.hero .heroSection {
+    position: relative;
+}
+.hero .heroBanner {
+    display: flex;
+    align-items: center;
+    /* justify-content: center;
+    flex-flow: column; */
+    height: 600px;
+
+}
+
+.hero .heroBanner p{
+    color: #FFFFFF;
+    font-weight: 200;
+}
+
+.hero .heroBanner p.date {
+    font-weight: 400;
+}
+
+.hero .heroBanner p span{
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.heroInner {
+    background-color: var(--secondary);
+    padding: 35px 45px;
+    text-transform: uppercase;
+    border-radius: 5px;;
+}
+
+.heroInner a{
+    margin-top: 20px;
+}
+
+.heroInner .platforms{
+    margin-top: 20px;
+    font-size: 20px;
+    
+}
+
+.heroInner .platforms p {
+    font-weight: bold;
+}
+
+.heroInner .platforms i {
+    color: #ffbc00;
+    font-size: 25px;
+    padding-right: 30px;
+    margin-top: 15px;
+}
+
+/*.heroSection {
+    height: 100%;
+    position: relative;
+}*/
+
+.hero h2 {
+    font-family: var(--headlineOne);
+}
+
+.heroInner h3 {
+    font-size: 39px;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-family: var(--body);
+}
+
+.music .sectionOne .sectionHeading, .musicTime {
+    display: inline-block;
+}
+
+.music .musicTime {
+    font-size: 21px;
+    color: var(--content);
+    font-family: var(--body);
+    padding-left: 28px;
+    font-weight: 600;
+}
+
+.music .musicTime span {
+    margin-right: 20px;
+}
+
+.music .musicTime span.active{
+    color: var(--secondary);
+    border-bottom: 2px solid var(--content);
+    padding-bottom: 4px;
+    
+}
+
+.music-wrapper, .aboutWrapper{
+    background: var(--background);
+}
+
+.tableRowWrapper{
+    border-bottom: 1px solid var(--content);
+    padding: 25px 10px;
+}
+
+.tableRowWrapper .row, .eventBox .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.music, .events, .gallery, .history, .contacts {
+    padding: 80px 0
+}
+
+.music .tableRow p, .music .tableRow i{
+    color: var(--content);
+    font-size: 13px;
+    font-weight: 600;
+    /* background: var(--background); */
+}
+
+.music .tableRow i{
+    font-size: 21px;
+}
+
+.music .tableRow .index{
+    color: var(--secondary);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+    font-size: 15px;
+}
+.music .tableRow .thumbnail i {
+    position: relative;
+    bottom: 18px;
+    left: 4px;
+}
+
+.music .song, .eventBox .tableRow p span{
+    color: var(--secondary);
+    font-weight: bold;
+    display: block;
+}
+
+.horizontalLine {
+    width:40%;
+    max-width: 100%;
+    background: var(--content);
+    height: 1px;
+    display: inline-block;
+
+}
+
+.tableRowWrapper.active {
+    background: #FFFFFF;
+    -webkit-box-shadow: 1px 0px 14px -1px rgba(128,128,128,1);
+    -moz-box-shadow: 1px 0px 14px -1px rgba(128,128,128,1);
+    box-shadow: 1px 0px 14px -1px rgba(128,128,128,1);
+    cursor: pointer;
+}
+
+.tableRowWrapper.active.musicHeading {
+    background: var(--background);
+    box-shadow: none;
+}
+
+.tableRowWrapper.active .fa-caret-right{
+    color: #3a38e8;
+}
+
+.tableRowWrapper.active p{
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.tableRowWrapper.active p.artist {
+    color: var(--content);
+}
+
+.tableRowWrapper.active .fa-heart {
+    color: #e4447f;
+}
+
+.showMore {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.showMore a {
+    padding:0 20px;
+    color: var(--secondary);
+}
+
+.sectionTwo {
+    padding-left:15px;
+}
+
+.eventControls, .eventArrow {
+    display: inline-block;
+}
+.eventControls select {
+    border: 0;
+    font-size: 15px;
+}
+.events .arrow{
+    padding: 8px 14px;
+    background: #EFEFEF;
+    display: inline-block;
+    border-radius: 20px;
+    
+}
+
+.events .arrow, .events select {
+    margin-right: 30px;
+}
+
+.eventArrow {
+    margin-left:30px;
+}
+
+.events .arrow i, .eventPrice{
+    color: var(--secondary);
+}
+
+.eventBox .eventMonth,.eventBox .eventLocation {
+    color: var(--content);
+}
+
+.eventPrice {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.eventPrice strong{
+    font-size: 18px;
+}
+
+.eventDate {
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.eventBox h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.eventBox {
+    /* border: 1px solid var(--secondary); */
+    padding: 40px 25px;
+    -webkit-box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 23px 0px rgba(0,0,0,0.75);
+    margin: 60px 0
+}
+
+.eventBox .showMore {
+    text-align: left;
+    
+    font-weight: bold;
+}
+.eventBox .showMore a{
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.packages .boxes {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 20px;
+}
+
+.packages .boxes .box {
+    background: var(--background);
+    padding: 22px;
+    margin-bottom: 12px;
+}
+
+.packages h2 {
+    font-family: var(--headlineOne);
+    text-transform: capitalize;
+}
+
+.packages p {
+    
+    padding-bottom: 7px;
+}
+
+.products{
+    text-align: center;
+}
+
+.products .productBoxes{
+    display: grid;
+     grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-gap: 20px;
+}
+
+.products .productBox img{
+    width: 90px;
+    max-width: 100%;
+}
+
+.productImg {
+    background: var(--background);
+    padding: 20px 0;
+}
+
+.products .productHash {
+    color: var(--primary);
+    font-family: var(--body);
+    text-transform: capitalize;
+}
+
+.products .productName {
+    font-family: var(--headlineOne);
+    font-size: 20px;
+}
+
+.testimonials {
+    padding: 22px 20px 45px 20px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.testimonials img {
+    width: 100px;
+    max-width: 100%;
+    border: 1px solid transparent;
+    border-radius: 19px;
+}
+
+.testimonials .customerName {
+    color: var(--tertiary);
+    font-family: var(--headlineOne);
+    font-size: 18px;
+}
+
+.tastingSection {
+    text-align: center;
+}
+.gallery .boxes {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.gallery img {
+    width: 500px;
+    max-width: 100%;
+}
+.gallery .boxes {
+    grid-gap: 20px;
+}
+
+.tastingSection {
+    background: url('../imgs/winetasting.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tastingSection h2 {
+    font-family: var(--headlineOne);
+    color: #FFF;
+    font-size: 40px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.tastingSection h2 span{
+    font-family: var(--headlineOne);
+    font-size: 40px;
+    text-transform: uppercase;
+    display: block;
+}
+.events .boxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.events .box {
+    padding: 20px;
+    border: 7px solid var(--background);
+    margin-bottom: 15px;
+}
+
+.events .box img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.events .eventName {
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: 4px;
+}
+
+.events .content p{
+    padding: 0px;
+}
+
+.events .content {
+    padding: 5px 0;
+}
+.events  a{
+    color: var(--tertiary);
+    text-transform: uppercase;
+}
+
+.eventsWrapper .imgContainer img{
+    width: 600px;
+    max-width: 100%;
+    margin-left: 30px;
+    margin-top: 17px;
+}
+.instaBtnWrapper{
+    text-align: center;
+    margin-top:15px;
+}
+
+.instaBtnWrapper a {
+    color: #FFFFFF;
+    background:var(--tertiary);
+    display: inline-block;
+    padding: 10px 45px;
+    border-radius: 2px;
+}
+
+
+#discography .history .sectionOne img{
+    width: 100%;
+}
+
+#discography .storeIcons {
+    margin-top:20px;
+}
+
+#discography .storeIcons img{
+    width:200px;
+    max-width: 100%;
+    
+}
+
+#discography .storeIcon{
+    margin-right: 15px;
+}
+
+#discography .music-wrapper{
+    background: #FFFFFF;
+}
+
+#contact .contactInfo div{
+    margin-bottom:40px;
+}
+
+#contact .formWrapper h2{
+    margin-bottom: 10px;
+}
+
+.footer-wrapper {
+    background: var(--background);
+    text-align: center;
+    padding:35px 20px;
+}
+
+.footerSection {
+    margin-bottom: 15px;
+}
+
+.footerHeading {
+    color: var(--secondary);
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    font-family: var(--body);
+}
+
+.footerSection a {
+    display: inline-block;
+}
+
+.footerSection p,.footerSection a {
+    padding-top: 5px;
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+.footerSection ul li {
+    list-style: none;
+}
+
+.footerSection .logoFooter {
+    background: url(../imgs/logoSprite.png);
+    display: inline-block;
+    width: 138px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footerSection  .logoFooter.logoIconFooter {
+    background-position: 0;
+}
+
+.footerPara i {
+    width: 15px;
+}
+
+.footer-wrapper i {
+    color: var(--secondary);
+    
+}
+
+.footer-wrapper .social{
+    text-align: right;
+}
+ 
+.footer-wrapper .social i{
+    padding-right: 15px;
+}
+
+#winery .cta-secondary {
+    padding-left: 0px;
+}
+
+#winery .testimonials {
+
+    background: var(--secondary);
+}
+
+
+.heroBanner .fieldset {
+    display: inline-block;
+}
+.heroBanner .fieldset.cta {
+    display: block;
+}
+
+.heroBanner .fieldset input, textarea {
+    border: 0;
+    border-bottom: 1px solid #574e4e;
+    padding-bottom: 10px;
+    width: 100px;
+    max-width: 100%;
+    padding-left:15px;
+    padding-top: 10px;
+}
+
+.heroBanner form .cta {
+
+    padding: 10px 15px;
+    margin-top: 15px;
+    border: 0;
+    color: #FFFFFF;
+    font-family: var(--headlineOne);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 0px;
+
+}
+
+.heroBanner form .cta input {
+    border: 0px;
+}
+
+#contact h3 {
+
+    text-transform: uppercase;
+    font-size: 28px;
+    padding-bottom: 20px;
+
+}
+
+#contact .formWrapper .sectionHeading, #contact .formWrapper .content{
+    padding-left: 40px;
+}
+
+#contact #main form {
+    padding: 0px 20px 35px 0;
+    margin-top:20px;
+}
+
+#contact .fieldset {
+    padding-bottom: 15px;
+    overflow: auto;
+}
+
+#contact label, #main input, #main textarea {
+    font-size: 14px
+}
+
+#contact .fieldset label {
+    display: inline-block;
+    width: 110px;
+    max-width: 100%;
+    text-align: right;
+    text-transform: capitalize;
+    margin-right:15px;
+    color: #574e4e;
+}
+
+#contact #main .fieldset input, textarea {
+    border: 0;
+    border-bottom: 1px solid #574e4e;
+    padding-bottom: 10px;
+    width: 290px;
+    max-width: 100%;
+}
+
+#contact .description-label {
+    float: left;
+}
+
+#contact textarea {
+    display: block; 
+    height: 100px; 
+    line-height: 20px;
+}
+
+#contact #main .fieldset input.cta-primary {
+    border-bottom: 0;
+}
+
+
+
+
+.awardImg {
+    width: 160px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.anniversaryImg {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
+
+.history .tripadvisorAward {
+    width: 130px;
+    max-width: 100%;
+}
+
+.packages .boxes .box img{
+    width: 345px;
+    max-width: 100%;
+}
+
+.packages .boxes .box a {
+    color: var(--primary)
+}
+
+#room .twoColumnLayout i{
+    color: var(--content);
+}
+
+#media .videoGallery {
+    padding: 0;
+    padding-bottom:80px;
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#modalContainer .content {
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background: #FFF;
+    color: #333333;
+    padding: 20px;
+    position: relative;
+}
+
+.modal .platforms i {
+    position: relative;
+    font-size: 28px;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+#modalContainer .content p{
+    color: #333333;
+}
+
+#modalContainer .content i{
+    color: #333333;
+}
+
+.modal i {
+    position: absolute;
+    font-size: 40px;
+    color: #000;
+    right: -20px;
+    top: -20px;
+    background: #fff;
+    border-radius: 100px;
+}
+
+
+@media screen and (min-width: 768px) {
+    
+    
+   
+    .hero .heroBanner p {
+        color: #FFFFFF;
+        font-size: 22px;
+    }
+    
+
+    .features{
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        grid-gap: 20px;
+    }
+
+    .features .boxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 25px;
+        text-align: center;
+
+    }
+
+    .features .boxes span.icon {
+        background-image: url(../imgs/sprite3.png);
+        display: block;
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+    }
+
+     .features .boxes .icon.iconOne {
+        background-position: -177px -8px;
+    }
+    .features .boxes .icon.iconTwo {
+        background-position: -338px -6px;
+    }
+    .features .boxes .icon.iconThree {
+        background-position: -20px 0px;
+    }
+    .features .boxes .icon.iconFour {
+        background-position: -13px -149px;
+    }
+
+    .gallery .boxes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tastingSection {
+        height: 600px;
+    }
+
+    .tastingSection h2 {
+        font-size: 90px;
+    }
+
+    .tastingSection h2 span{
+        font-size: 60px;
+    }
+
+    .eventsWrapper, .gallery .boxes,.products .productBoxes {
+        margin-top: 30px;
+    }
+
+    .testimonials {
+        padding: 50px 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #navFlyout {
+        display:none;
+    }
+    #main {
+        padding: 0px;
+    }
+    .spacer {
+        margin-bottom: 64px;
+    }
+
+    .hero h2{
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .wineMaking .boxes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .gallery .boxes {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    .eventsWrapper {
+        display: flex;
+        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .events .boxes {
+        flex-basis: 100%;
+        flex: 1;
+    }
+
+    .events .box{
+        display: flex;
+    }
+
+    .events .content p{
+        display: inline-block;
+        font-size: 12px;
+    }
+
+    .events .eventName{
+        font-size: 16px;
+    }
+
+    .events a {
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+
+    .imgContainer {
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+    }
+
+    .footer-wrapper {
+        text-align: left;
+    }
+
+    .footer-wrapper a {
+        text-decoration: none;
+    }
+
+    .wineMaking h2 {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    .hero .heroBanner {
+        display: block;
+        height: 400px;
+    }
+
+    .hero{
+        height: 400px;
+        background: none;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .heroInner h3{
+        font-size: 32px;
+    }
+
+    .sectionHeading{
+        font-size: 26px;
+    }
+
+    .music .musicTime{
+        font-size: 16px;
+    }
+
+    .music-wrapper .sectionTwo{
+        margin-top:30px;
+    }
+
+    .music-wrapper .sectionTwo img{
+        margin-top:15px;
+    }
+    .music-wrapper .sectionTwo h3{
+        font-size: 14px;
+    }
+    .music-wrapper .sectionTwo p{
+        font-size: 13px;
+    }
+
+    .events .arrow, .events select {
+        margin-right: 1px;
+    }
+
+    .tableRowWrapper .row, .eventBox .row{
+        display: block;
+        text-align: left;
+    }
+    .eventDate{
+        padding-left: 0;
+    }
+    .eventBox p {
+        padding-bottom: 15px;
+    }
+
+    .events a{
+        color: #FFFFFF;
+    }
+    .music-wrapper, .aboutWrapper{
+        padding: 0 15px;
+    }
+
+    #contact .fieldset label{
+        text-align: left;
+    }
+    #contact .formWrapper .sectionHeading, #contact .formWrapper .content {
+        padding-left: 0px;
+    }
+}
+
+
+
+
+
+
